@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Opetussimulaattorit</title>
-<meta name="description" content="Selaimessa toimivat opetussimulaattorit: hydrauliikka, elektroniikka ja automaatio. Juho Pirttilahti, SEAMK. CC BY 4.0.">
+<meta name="description" content="Selaimessa toimivat opetussimulaattorit: hydrauliikka, elektroniikka, automaatio ja materiaalitekniikka. Juho Pirttilahti, SEAMK. CC BY 4.0.">
 <meta name="author" content="Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK)">
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fi">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,10 @@
 <style>
 :root{box-sizing:border-box;
   --bg:#EEF2F5;--paper:#FFFFFF;--ink:#17212B;--muted:#56636F;--line:#C9D2DA;--acc:#E39B17;--link:#1E5DBA;
-  --hyd:#1E6FB0;--ele:#C2399A;--aut:#2E8B57}
+  --hyd:#1E6FB0;--ele:#C2399A;--aut:#2E8B57;--mat:#B5651D}
 *,*::before,*::after{box-sizing:inherit}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A}}
-:root[data-theme="dark"]{--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060}}
+:root[data-theme="dark"]{--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;
   padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
@@ -33,7 +33,7 @@ h1{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;font
 .langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
 .langsw button{border:0;background:var(--paper);color:var(--ink);padding:6px 14px;cursor:pointer;font:600 14px "Barlow",sans-serif}
 .langsw button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border-top:5px solid var(--c)}
 .card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-bottom:1px solid var(--line);background:var(--bg)}
 .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -59,7 +59,7 @@ footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:v
 <header>
   <div>
     <h1 data-en="Teaching simulators">Opetussimulaattorit</h1>
-    <p class="lead" data-en="Browser-based simulators for hydraulics, electronics and automation. They run on any computer and phone without installation, in Finnish and English.">Selaimessa toimivat simulaattorit hydrauliikan, elektroniikan ja automaation opetukseen. Ne toimivat millä tahansa tietokoneella ja puhelimella ilman asennusta, suomeksi ja englanniksi.</p>
+    <p class="lead" data-en="Browser-based simulators for hydraulics, electronics, automation and materials engineering. They run on any computer and phone without installation, in Finnish and English.">Selaimessa toimivat simulaattorit hydrauliikan, elektroniikan, automaation ja materiaalitekniikan opetukseen. Ne toimivat millä tahansa tietokoneella ja puhelimella ilman asennusta, suomeksi ja englanniksi.</p>
     <p class="who">Juho Pirttilahti · <span data-en="Seinäjoki University of Applied Sciences (SEAMK)">Seinäjoen ammattikorkeakoulu (SEAMK)</span> · CC BY 4.0</p>
   </div>
   <div class="langsw" role="group" aria-label="Kieli / Language"><button type="button" data-lang="fi" lang="fi">FI</button><button type="button" data-lang="en" lang="en">EN</button></div>
@@ -107,13 +107,26 @@ footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:v
       </div>
     </div>
   </article>
+  <article class="card" style="--c:var(--mat)">
+    <img src="kuvat/materiaali.webp" alt="Materiaalisimulaattorin näkymä: 42CrMo4:n induktiokarkaisu, kovuusprofiili ja mikrorakenne" data-en-alt="Materials simulator view: induction hardening of 42CrMo4, hardness profile and microstructure" width="1000" height="625" loading="lazy">
+    <div class="body">
+      <h2 data-en="Materials Simulator">Materiaalisimulaattori</h2>
+      <p data-en="Heat treatment of steel: quenching and tempering, induction hardening and black nitriding with hardness profiles and microstructure. Crystal structures, Fe–C diagram and tensile test.">Teräksen lämpökäsittely: nuorrutus, induktiokarkaisu ja mustanitraus kovuusprofiileineen ja mikrorakenteineen. Kiderakenteet, Fe–C-piirros ja vetokoe.</p>
+      <ul class="tags"><li data-en="42CrMo4">42CrMo4</li><li data-en="induction hardening">induktiokarkaisu</li><li data-en="nitrocarburizing">nitrohiiletys</li><li data-en="martensite">martensiitti</li><li data-en="tensile test">vetokoe</li></ul>
+      <div class="acts">
+        <a class="btn pri" href="https://jipirtti.github.io/Materiaalisimulaattori/" data-href-en="https://jipirtti.github.io/Materiaalisimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
+        <a class="btn" href="https://jipirtti.github.io/Materiaalisimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
+        <a class="btn" href="https://github.com/Jipirtti/Materiaalisimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
+      </div>
+    </div>
+  </article>
 </main>
 
 <section class="common" aria-label="Yhteistä kaikille simulaattoreille" data-en-aria="Common to all simulators">
   <div><h3 data-en="No installation">Ei asennusta</h3><p data-en="Each simulator is a single web page. It also works offline when saved to your own computer.">Jokainen simulaattori on yksi verkkosivu. Sen voi tallentaa omalle koneelle ja käyttää ilman verkkoyhteyttä.</p></div>
-  <div><h3 data-en="Examples and exercises">Esimerkit ja tehtävät</h3><p data-en="Ready-made example circuits with expected values, and a user manual with exercises.">Valmiit esimerkkipiirit odotettuine arvoineen sekä käyttöohje harjoitustehtävineen.</p></div>
-  <div><h3 data-en="Validated">Validoitu</h3><p data-en="Automatic tests compare the results to hand calculations on every change, and the teacher validates the phenomena each semester.">Automaattiset testit vertaavat tuloksia käsinlaskuun jokaisen muutoksen yhteydessä, ja opettaja validoi ilmiöt lukukausittain.</p></div>
-  <div><h3 data-en="Feedback">Palaute</h3><p data-en="The Feedback button in each simulator opens a pre-filled report with the circuit attached, so the issue can be reproduced exactly.">Simulaattorin Palaute-painike avaa valmiiksi täytetyn ilmoituksen, johon piiri liitetään, joten tilanne voidaan toistaa täsmälleen.</p></div>
+  <div><h3 data-en="Examples and exercises">Esimerkit ja tehtävät</h3><p data-en="Ready-made examples with expected values, and a user manual with exercises.">Valmiit esimerkit odotettuine arvoineen sekä käyttöohje harjoitustehtävineen.</p></div>
+  <div><h3 data-en="Validated">Validoitu</h3><p data-en="Automatic tests compare the results to hand calculations, datasheets and standards on every change, and the teacher validates the phenomena each semester.">Automaattiset testit vertaavat tuloksia käsinlaskuun, teknisiin kortteihin ja standardeihin jokaisen muutoksen yhteydessä, ja opettaja validoi ilmiöt lukukausittain.</p></div>
+  <div><h3 data-en="Feedback">Palaute</h3><p data-en="The Feedback button in each simulator opens a pre-filled report with the circuit or settings attached, so the issue can be reproduced exactly.">Simulaattorin Palaute-painike avaa valmiiksi täytetyn ilmoituksen, johon piiri tai asetukset liitetään, joten tilanne voidaan toistaa täsmälleen.</p></div>
 </section>
 
 <footer>
