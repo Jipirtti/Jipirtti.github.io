@@ -1,0 +1,141 @@
+<!doctype html>
+<!--
+  SEAMKin opetussimulaattorit – etusivu.
+  Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK), 2026. CC BY 4.0.
+-->
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Opetussimulaattorit</title>
+<meta name="description" content="Selaimessa toimivat opetussimulaattorit: hydrauliikka, elektroniikka ja automaatio. Juho Pirttilahti, SEAMK. CC BY 4.0.">
+<meta name="author" content="Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK)">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;
+  --bg:#EEF2F5;--paper:#FFFFFF;--ink:#17212B;--muted:#56636F;--line:#C9D2DA;--acc:#E39B17;--link:#1E5DBA;
+  --hyd:#1E6FB0;--ele:#C2399A;--aut:#2E8B57}
+*,*::before,*::after{box-sizing:inherit}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A}}
+:root[data-theme="dark"]{--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+a{color:var(--link)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 56px}
+header{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:28px}
+h1{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;font-size:clamp(34px,5.4vw,54px);line-height:1.02;margin:0 0 8px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:62ch;margin:0}
+.who{font-size:14px;color:var(--muted);margin-top:10px}
+.langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.langsw button{border:0;background:var(--paper);color:var(--ink);padding:6px 14px;cursor:pointer;font:600 14px "Barlow",sans-serif}
+.langsw button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border-top:5px solid var(--c)}
+.card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-bottom:1px solid var(--line);background:var(--bg)}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h2{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;font-size:28px;line-height:1.05;margin:0}
+.card p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0 0;padding:0;list-style:none}
+.tags li{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:1px 9px;color:var(--muted)}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.btn{display:inline-flex;align-items:center;min-height:38px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:500;background:var(--paper)}
+.btn:hover{border-color:var(--muted)}
+.btn.pri{background:var(--c);border-color:var(--c);color:#fff;font-weight:600}
+.btn:focus-visible,.langsw button:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+section.common{margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.common h3{font-size:16px;margin:0 0 4px}
+.common p{margin:0;color:var(--muted);font-size:15px}
+footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:980px){.grid{grid-template-columns:1fr 1fr}section.common{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid,section.common{grid-template-columns:1fr}.wrap{padding:20px 16px 40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1 data-en="Teaching simulators">Opetussimulaattorit</h1>
+    <p class="lead" data-en="Browser-based simulators for hydraulics, electronics and automation. They run on any computer and phone without installation, in Finnish and English.">Selaimessa toimivat simulaattorit hydrauliikan, elektroniikan ja automaation opetukseen. Ne toimivat millä tahansa tietokoneella ja puhelimella ilman asennusta, suomeksi ja englanniksi.</p>
+    <p class="who">Juho Pirttilahti · <span data-en="Seinäjoki University of Applied Sciences (SEAMK)">Seinäjoen ammattikorkeakoulu (SEAMK)</span> · CC BY 4.0</p>
+  </div>
+  <div class="langsw" role="group" aria-label="Kieli / Language"><button type="button" data-lang="fi" lang="fi">FI</button><button type="button" data-lang="en" lang="en">EN</button></div>
+</header>
+
+<main class="grid">
+  <article class="card" style="--c:var(--hyd)">
+    <img src="kuvat/hydrauliikka.webp" alt="Hydrauliikkasimulaattorin näkymä: pumppu, venttiili ja sylinteri" data-en-alt="Hydraulics simulator view: pump, valve and cylinder" width="1000" height="625" loading="lazy">
+    <div class="body">
+      <h2 data-en="Hydraulics Simulator">Hydrauliikkasimulaattori</h2>
+      <p data-en="Hydraulic circuits with ISO 1219 symbols: pressure, flow, force and speed in real time. Component and hose sizing.">Hydraulipiirit ISO 1219 -piirrosmerkeillä: paine, tilavuusvirta, voima ja nopeus reaaliajassa. Komponenttien ja letkujen mitoitus.</p>
+      <ul class="tags"><li data-en="pumps and valves">pumput ja venttiilit</li><li data-en="cylinders and motors">sylinterit ja moottorit</li><li data-en="hose pressure loss">letkujen painehäviö</li><li data-en="simple / advanced">yksinkertainen / kehittynyt</li></ul>
+      <div class="acts">
+        <a class="btn pri" href="https://jipirtti.github.io/Hydrauliikkasimulaattori/" data-href-en="https://jipirtti.github.io/Hydrauliikkasimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
+        <a class="btn" href="https://jipirtti.github.io/Hydrauliikkasimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
+        <a class="btn" href="https://github.com/Jipirtti/Hydrauliikkasimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card" style="--c:var(--ele)">
+    <img src="kuvat/elektroniikka.webp" alt="Elektroniikkasimulaattorin näkymä: kolmivaiheinen tyristorisilta ja oskilloskooppi" data-en-alt="Electronics simulator view: three-phase thyristor bridge and oscilloscope" width="1000" height="625" loading="lazy">
+    <div class="body">
+      <h2 data-en="Electronics Simulator">Elektroniikkasimulaattori</h2>
+      <p data-en="DC and AC circuits and power electronics with a four-channel oscilloscope: rectifiers, DC-DC converters, inverters, transformer, DC motor.">DC- ja AC-piirit ja tehoelektroniikka nelikanavaisella oskilloskoopilla: tasasuuntaajat, hakkurit, invertterit, muuntaja ja DC-moottori.</p>
+      <ul class="tags"><li data-en="oscilloscope">oskilloskooppi</li><li data-en="power, PF, THD">teho, tehokerroin, THD</li><li data-en="PWM and sine PWM">PWM ja sini-PWM</li><li data-en="simple / advanced">yksinkertainen / kehittynyt</li></ul>
+      <div class="acts">
+        <a class="btn pri" href="https://jipirtti.github.io/Elektroniikkasimulaattori/" data-href-en="https://jipirtti.github.io/Elektroniikkasimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
+        <a class="btn" href="https://jipirtti.github.io/Elektroniikkasimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
+        <a class="btn" href="https://github.com/Jipirtti/Elektroniikkasimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card" style="--c:var(--aut)">
+    <img src="kuvat/automaatio.webp" alt="Automaatiosimulaattorin näkymä: tähti–kolmiokäynnistys ja aikakaavio" data-en-alt="Automation simulator view: star–delta starter and timing diagram" width="1000" height="625" loading="lazy">
+    <div class="body">
+      <h2 data-en="Automation Simulator">Automaatiosimulaattori</h2>
+      <p data-en="Relay logic, motor control circuits, sensors, electro-pneumatics and PLC programming with ladder diagrams. Safety relay and fault simulation.">Relelogiikka, moottorien ohjauspiirit, anturit, sähköpneumatiikka ja PLC-ohjelmointi tikapuukaaviolla. Turvarele ja vikojen simulointi.</p>
+      <ul class="tags"><li data-en="relays and timers">releet ja ajastimet</li><li data-en="PLC ladder diagram">PLC-tikapuukaavio</li><li data-en="emergency stop">hätäseis</li><li data-en="timing diagram">aikakaavio</li></ul>
+      <div class="acts">
+        <a class="btn pri" href="https://jipirtti.github.io/Automaatiosimulaattori/" data-href-en="https://jipirtti.github.io/Automaatiosimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
+        <a class="btn" href="https://jipirtti.github.io/Automaatiosimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
+        <a class="btn" href="https://github.com/Jipirtti/Automaatiosimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<section class="common" aria-label="Yhteistä kaikille simulaattoreille" data-en-aria="Common to all simulators">
+  <div><h3 data-en="No installation">Ei asennusta</h3><p data-en="Each simulator is a single web page. It also works offline when saved to your own computer.">Jokainen simulaattori on yksi verkkosivu. Sen voi tallentaa omalle koneelle ja käyttää ilman verkkoyhteyttä.</p></div>
+  <div><h3 data-en="Examples and exercises">Esimerkit ja tehtävät</h3><p data-en="Ready-made example circuits with expected values, and a user manual with exercises.">Valmiit esimerkkipiirit odotettuine arvoineen sekä käyttöohje harjoitustehtävineen.</p></div>
+  <div><h3 data-en="Validated">Validoitu</h3><p data-en="Automatic tests compare the results to hand calculations on every change, and the teacher validates the phenomena each semester.">Automaattiset testit vertaavat tuloksia käsinlaskuun jokaisen muutoksen yhteydessä, ja opettaja validoi ilmiöt lukukausittain.</p></div>
+  <div><h3 data-en="Feedback">Palaute</h3><p data-en="The Feedback button in each simulator opens a pre-filled report with the circuit attached, so the issue can be reproduced exactly.">Simulaattorin Palaute-painike avaa valmiiksi täytetyn ilmoituksen, johon piiri liitetään, joten tilanne voidaan toistaa täsmälleen.</p></div>
+</section>
+
+<footer>
+  <p data-en="Simulators and manuals: Juho Pirttilahti, Seinäjoki University of Applied Sciences (SEAMK), 2026. Design, content and validation: Juho Pirttilahti. Code implemented with AI assistance (Claude, Anthropic). Licensed under CC BY 4.0: you may copy, share and adapt the material for any purpose, provided you credit the author and the institution, indicate the licence and state your changes. The simulators are teaching tools and are not intended for designing real systems.">Simulaattorit ja käyttöohjeet: Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK), 2026. Suunnittelu, sisältö ja validointi: Juho Pirttilahti. Ohjelmakoodi toteutettu tekoälyavusteisesti (Claude, Anthropic). Lisenssi CC BY 4.0: saat kopioida, jakaa ja muokata aineistoa mihin tahansa tarkoitukseen, kunhan mainitset tekijän ja oppilaitoksen, merkitset lisenssin ja kerrot tekemistäsi muutoksista. Simulaattorit ovat opetusvälineitä, eikä niitä ole tarkoitettu todellisten järjestelmien suunnitteluun.</p>
+  <p><a href="https://creativecommons.org/licenses/by/4.0/deed.fi" rel="license">CC BY 4.0</a></p>
+</footer>
+</div>
+<script>
+(()=>{
+  let lang;try{const u=new URLSearchParams(location.search).get('lang');lang=u==='en'||u==='fi'?u:localStorage.getItem('seamk-sim-lang');}catch(e){}
+  if(lang!=='fi'&&lang!=='en')lang=(navigator.language||'fi').toLowerCase().startsWith('fi')?'fi':'en';
+  function apply(){
+    document.querySelectorAll('[data-en]').forEach(el=>{if(el.dataset.fi===undefined)el.dataset.fi=el.textContent;el.textContent=lang==='en'?el.dataset.en:el.dataset.fi;});
+    document.querySelectorAll('[data-en-alt]').forEach(el=>{if(el.dataset.fiAlt===undefined)el.dataset.fiAlt=el.alt;el.alt=lang==='en'?el.dataset.enAlt:el.dataset.fiAlt;});
+    document.querySelectorAll('[data-en-aria]').forEach(el=>{if(el.dataset.fiAria===undefined)el.dataset.fiAria=el.getAttribute('aria-label');el.setAttribute('aria-label',lang==='en'?el.dataset.enAria:el.dataset.fiAria);});
+    document.querySelectorAll('[data-href-en]').forEach(el=>{if(el.dataset.hrefFi===undefined)el.dataset.hrefFi=el.getAttribute('href');el.setAttribute('href',lang==='en'?el.dataset.hrefEn:el.dataset.hrefFi);});
+    document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+    document.documentElement.lang=lang;document.title=lang==='en'?'Teaching simulators':'Opetussimulaattorit';
+  }
+  document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;try{localStorage.setItem('seamk-sim-lang',lang);}catch(e){}apply();}));
+  apply();
+})();
+</script>
+</body>
+</html>
