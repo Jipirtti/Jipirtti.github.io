@@ -1,6 +1,6 @@
 # Opetussimulaattorit / Teaching simulators
 
-Etusivu, josta pääsee neljään selaimessa toimivaan opetussimulaattoriin: <https://jipirtti.github.io/>
+Etusivu, josta pääsee viiteen selaimessa toimivaan opetussimulaattoriin: <https://jipirtti.github.io/>
 
 | Simulaattori | Simulaattori | Käyttöohje | Lähdekoodi ja palaute |
 | --- | --- | --- | --- |
@@ -8,6 +8,7 @@ Etusivu, josta pääsee neljään selaimessa toimivaan opetussimulaattoriin: <ht
 | Elektroniikkasimulaattori | <https://jipirtti.github.io/Elektroniikkasimulaattori/> | [Käyttöohje](https://jipirtti.github.io/Elektroniikkasimulaattori/docs/kayttoohje.html) | [Jipirtti/Elektroniikkasimulaattori](https://github.com/Jipirtti/Elektroniikkasimulaattori) |
 | Automaatiosimulaattori | <https://jipirtti.github.io/Automaatiosimulaattori/> | [Käyttöohje](https://jipirtti.github.io/Automaatiosimulaattori/docs/kayttoohje.html) | [Jipirtti/Automaatiosimulaattori](https://github.com/Jipirtti/Automaatiosimulaattori) |
 | Materiaalisimulaattori | <https://jipirtti.github.io/Materiaalisimulaattori/> | [Käyttöohje](https://jipirtti.github.io/Materiaalisimulaattori/docs/kayttoohje.html) | [Jipirtti/Materiaalisimulaattori](https://github.com/Jipirtti/Materiaalisimulaattori) |
+| Projektinhallintasimulaattori | <https://jipirtti.github.io/Projektinhallintasimulaattori/> | [Käyttöohje](https://jipirtti.github.io/Projektinhallintasimulaattori/docs/kayttoohje.html) | [Jipirtti/Projektinhallintasimulaattori](https://github.com/Jipirtti/Projektinhallintasimulaattori) |
 
 Tekijä: Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK), 2026. Suunnittelu, sisältö ja validointi: Juho Pirttilahti. Ohjelmakoodi toteutettu tekoälyavusteisesti (Claude, Anthropic). Lisenssi: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fi).
 

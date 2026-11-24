@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Opetussimulaattorit</title>
-<meta name="description" content="Selaimessa toimivat opetussimulaattorit: hydrauliikka, elektroniikka, automaatio ja materiaalitekniikka. Juho Pirttilahti, SEAMK. CC BY 4.0.">
+<meta name="description" content="Selaimessa toimivat opetussimulaattorit: hydrauliikka, elektroniikka, automaatio, materiaalitekniikka ja projektinhallinta. Juho Pirttilahti, SEAMK. CC BY 4.0.">
 <meta name="author" content="Juho Pirttilahti, Seinäjoen ammattikorkeakoulu (SEAMK)">
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fi">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,10 @@
 <style>
 :root{box-sizing:border-box;
   --bg:#EEF2F5;--paper:#FFFFFF;--ink:#17212B;--muted:#56636F;--line:#C9D2DA;--acc:#E39B17;--link:#1E5DBA;
-  --hyd:#1E6FB0;--ele:#C2399A;--aut:#2E8B57;--mat:#B5651D}
+  --hyd:#1E6FB0;--ele:#C2399A;--aut:#2E8B57;--mat:#B5651D;--pm:#B83227}
 *,*::before,*::after{box-sizing:inherit}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060}}
-:root[data-theme="dark"]{--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060;--pm:#FF7A6B}}
+:root[data-theme="dark"]{--bg:#0E1419;--paper:#161F26;--ink:#E2E8EE;--muted:#93A0AC;--line:#2A3540;--acc:#F0A82A;--link:#6FA7FF;--hyd:#5AA6E6;--ele:#E07CC4;--aut:#4CC38A;--mat:#E8A060;--pm:#FF7A6B}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;
   padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
@@ -59,7 +59,7 @@ footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:v
 <header>
   <div>
     <h1 data-en="Teaching simulators">Opetussimulaattorit</h1>
-    <p class="lead" data-en="Browser-based simulators for hydraulics, electronics, automation and materials engineering. They run on any computer and phone without installation, in Finnish and English.">Selaimessa toimivat simulaattorit hydrauliikan, elektroniikan, automaation ja materiaalitekniikan opetukseen. Ne toimivat millä tahansa tietokoneella ja puhelimella ilman asennusta, suomeksi ja englanniksi.</p>
+    <p class="lead" data-en="Browser-based simulators for hydraulics, electronics, automation, materials engineering and project management. They run on any computer and phone without installation, in Finnish and English.">Selaimessa toimivat simulaattorit hydrauliikan, elektroniikan, automaation, materiaalitekniikan ja projektinhallinnan opetukseen. Ne toimivat millä tahansa tietokoneella ja puhelimella ilman asennusta, suomeksi ja englanniksi.</p>
     <p class="who">Juho Pirttilahti · <span data-en="Seinäjoki University of Applied Sciences (SEAMK)">Seinäjoen ammattikorkeakoulu (SEAMK)</span> · CC BY 4.0</p>
   </div>
   <div class="langsw" role="group" aria-label="Kieli / Language"><button type="button" data-lang="fi" lang="fi">FI</button><button type="button" data-lang="en" lang="en">EN</button></div>
@@ -117,6 +117,19 @@ footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:v
         <a class="btn pri" href="https://jipirtti.github.io/Materiaalisimulaattori/" data-href-en="https://jipirtti.github.io/Materiaalisimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
         <a class="btn" href="https://jipirtti.github.io/Materiaalisimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
         <a class="btn" href="https://github.com/Jipirtti/Materiaalisimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
+      </div>
+    </div>
+  </article>
+  <article class="card" style="--c:var(--pm)">
+    <img src="kuvat/projektinhallinta.webp" alt="Projektinhallintasimulaattorin näkymä: Gantt-kaavio, jossa kriittinen polku on punaisella" data-en-alt="Project management simulator view: Gantt chart with the critical path in red" width="1000" height="625" loading="lazy">
+    <div class="body">
+      <h2 data-en="Project Management Simulator">Projektinhallintasimulaattori</h2>
+      <p data-en="Projects managed as Gantt charts: critical path, float, resources and levelling, earned value and Monte Carlo forecast. See at once how a delayed task affects the whole project. Exercises and your own projects.">Projektit Gantt-kaaviona: kriittinen polku, pelivarat, resurssit ja tasoitus, ansaittu arvo ja Monte Carlo -ennuste. Näet heti, miten myöhästynyt tehtävä vaikuttaa koko projektiin. Harjoitukset ja omat projektit.</p>
+      <ul class="tags"><li data-en="Gantt chart">Gantt-kaavio</li><li data-en="critical path">kriittinen polku</li><li data-en="resource levelling">resurssien tasoitus</li><li data-en="earned value">ansaittu arvo</li><li data-en="Monte Carlo">Monte Carlo</li></ul>
+      <div class="acts">
+        <a class="btn pri" href="https://jipirtti.github.io/Projektinhallintasimulaattori/" data-href-en="https://jipirtti.github.io/Projektinhallintasimulaattori/?lang=en" data-en="Open simulator">Avaa simulaattori</a>
+        <a class="btn" href="https://jipirtti.github.io/Projektinhallintasimulaattori/docs/kayttoohje.html" data-en="Manual (FI)">Käyttöohje</a>
+        <a class="btn" href="https://github.com/Jipirtti/Projektinhallintasimulaattori" data-en="Source and feedback">Lähdekoodi ja palaute</a>
       </div>
     </div>
   </article>
